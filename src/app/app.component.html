@@ -1,4 +1,21 @@
-
+<!-- 
 <h1>
   Bienvenido a {{title}}
-</h1>
+</h1> -->
+
+<div>
+  <p>Nombre del empleado: {{nombre}}</p>
+  <p>Edad: {{edad}}</p>
+  @if(edad>=18){
+    <p>Es mayor de edad</p>
+  }
+  @else {
+    <p>es menor de edad</p>
+  }
+  <p>los ultimos tres sueldos son: {{sueldos[0]}},{{sueldos[1]}},{{sueldos[2]}}</p>
+  <p>en los ultimos 3 meses ha ganado: {{ulitmoTresSueldos()}}</p>
+  <p>Estatus del empleado: {{esActivo()}}</p>
+  <p>en los ultimos tres meses ha ganado {{sueldos[0]+sueldos[1]+sueldos[2]}}</p>
+  <p>el empleado dentro de 5 anos tendra {{edad+5}}</p>
+  <p>Puede visitar el sitio ingresado <a href="{{sitio}}">aqui</a></p>
+</div>
