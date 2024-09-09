@@ -11,12 +11,38 @@
   <hr>
   <p>Resultado: {{resultado}}</p> -->
 
-  <h1>Prueba de la componente cronometro</h1>
+  <!-- <h1>Prueba de la componente cronometro</h1>
 
   <app-cronometro [inicio]="15" (multiplo10)="actualizar($event)"></app-cronometro>
   <h2>Evento</h2>
-  <h3>{{mensaje}}</h3>
+  <h3>{{mensaje}}</h3> -->
+
+
+
+
 
 
 </div>
 
+<!-- <div>
+  <app-selector-numerico [minimo]="1" [maximo]="10" #selector1></app-selector-numerico>
+  <br>
+  <button (click)="selector1.fijar(1)">Fijar en 1</button>
+  <button (click)="selector1.fijar(5)">Fijar en 5</button>
+  <button (click)="selector1.fijar(10)">Fijar en 10</button>
+</div> -->
+
+<div>
+  <app-selector-numerico [minimo]="1" [maximo]="10" #selector1></app-selector-numerico>
+  <br>
+  <button (click)="fijarSelector1(1)">Fijar en 1</button>
+  <button (click)="fijarSelector1(5)">Fijar en 5</button>
+  <button (click)="fijarSelector1(10)">Fijar en 10</button>
+  <hr>
+  <app-selector-numerico [minimo]="1" [maximo]="10" #selector2></app-selector-numerico>
+  <br>
+  <button (click)="fijarSelector2(1)">Fijar en 1</button>
+  <button (click)="fijarSelector2(5)">Fijar en 5</button>
+  <button (click)="fijarSelector2(10)">Fijar en 10</button>
+
+</div>
