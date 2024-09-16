@@ -1,11 +1,31 @@
 <!-- Confeccionar un formulario de contacto que permita cargar el nombre, mail y un mensaje. 
  Cuando se presiona un botón mostrar mediante interpolación los datos cargados. -->
 
- <form action="">
-  <label for="nombre">Nombre:</label>
-  <input type="text" id="nombre">
-  <label for="nombre">Email:</label>
-  <input type="text" id="nombre">
-  <label for="mensaje">Mensaje:</label>
-  <textarea name="" id="mensaje" cols="3"></textarea>
- </form>
+ <!-- <form [formGroup]="formularioContacto" (ngSubmit)="submit()">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre">
+  </div>
+  <div>
+    <label for="nombre">Email:</label>
+    <input type="text" id="nombre">
+  </div>
+  <div>
+    <label for="mensaje">Mensaje:</label>
+    <textarea name="" id="mensaje" cols="3"></textarea>
+  </div>
+ </form> -->
+
+ <form [formGroup]="formularioContacto" (ngSubmit)="submit()">
+  <p>Nombre:
+    <input type="text" formControlName="nombre">
+  </p>
+  <p>Mail:
+    <input type="text" formControlName="mail">
+  </p>
+  <p>Mensaje<br>
+    <textarea rows="10" cols="70" formControlName="mensaje"></textarea>
+  </p>
+  <button type="submit">Confirmar</button>
+</form>
+<div>{{datos}}</div>
