@@ -17,6 +17,7 @@ export class AppComponent {
   lista: string[];
 
   constructor(){
+    console.log('Entro al constructor')
     this.lista=[];
     let datos = localStorage.getItem("actividades");
     if(datos != null){

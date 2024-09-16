@@ -9,7 +9,7 @@ Almacenar en forma local en el navegador las actividades mediante el API localSt
   <button (click)="agregar()">Agregar</button>
 </div>
 <ol>
-  @for(art of lista: track $index){
+  @for(art of lista; track $index){
     <li>
       {{art}} <a (click)="borrar($index)" href="#">Borrar?</a>
     </li>
