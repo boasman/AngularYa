@@ -2,31 +2,44 @@
 
 Mediante dos controles radio puede indicar si quiere la conversión a hexadecimal u octal.
 Mediante un control select indica si quiere calcular el valor ingresado elevado a la potencia 2, 3 o 4.
+
 Finalmente con un control checkbox puede indicar que muestre la cantidad de dígitos del valor ingresado. -->
 
-<form>
+<form [formGroup]="formularioConversion" (ngSubmit)="submit()">
+  
   <div>
-    <label for="">Ingrese un valor decimal</label>
-    <input type="text" formControlName="numeroDecimal">
+    <label for="decimal">Ingrese un valor decimal</label>
+    <input id="decimal" type="text" formControlName="numerodecimal">
   </div>
+
   <div>
-    <label for="seleccionar">Seleccionar </label>
-    <select name="" id="" formControlName="potencia">
+    <label for="radiocheck">Convertir a:</label>
+    <input type="radio" id="radiocheck" formControlName="base" value="octal">Octal
+    <input type="radio" id="radiocheck" formControlName="base" value="hexadecimal">Hexadecimal
+  </div>
+
+  <div>
+    <label for="seleccionar">Elevar a:</label>
+    <select name="" id="seleccionar" formControlName="potencia">
       <option value="">2</option>
       <option value="">3</option>
       <option value="">4</option>
     </select>
   </div>
+
   <div>
     <label for="check">Mostrar cantidad de digito</label>
     <input type="checkbox" formControlName="largo">
   </div>
+
   <div>
-    <button>Confirmar</button>
+    <button type="submit">Confirmar</button>
   </div>
+
   <div>
-    <p>Conversion: {{}}</p>
-    <p></p>
+    <p>Conversion: {{conversion}}</p>
+    <p>Potencia: {{potenciaNumero}}</p>
+    <p>Cantidad de digitos: {{cantidad}}</p>
     <p></p>
   </div>
 
