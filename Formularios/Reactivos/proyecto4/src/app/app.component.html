@@ -1,0 +1,39 @@
+<!-- Confeccionar un formulario que permita cargar los siguientes datos de un alumno: dni, 
+ nombre, materia y sus tres notas. Agrupar las tres notas dentro de un FormGroup anidado al principal.
+Al presionar un botón mostrar un mensaje si se encuentra aprobado (todas las notas mayores o iguales a 4) -->
+
+<form action="" [formGroup]="formAlumno" (ngSubmit)="submit()">
+  <div>
+    <label for="dni">DNI: </label>
+    <input id="dni" type="text" formControlName="dni">
+  </div>
+  <div>
+    <label for="nombre">Nombre: </label>
+    <input type="text" formControlName="nombre">
+  </div>
+  <div>
+    <label for="materia">Materia: </label>
+    <input type="text" id="materia" formControlName="materia">
+  </div>
+  <div>
+    <div>
+      <label for="nota1">Nota 1: </label>
+      <input type="text" id="nota1" formControlName="nota1">
+    </div>
+    <div>
+      <label for="nota2">Nota 2: </label>
+      <input id="nota2" type="text" formControlName="nota2">
+    </div>
+    <div>
+      <label for="nota3">Nota 3: </label>
+      <input id="nota3" type="text" formControlName="nota3">
+    </div>
+  </div>
+  
+  <button type="submit">Confirmar</button>
+
+  <div>
+    <p>Resultado: {{resultado}}</p>
+  </div>
+
+</form>
