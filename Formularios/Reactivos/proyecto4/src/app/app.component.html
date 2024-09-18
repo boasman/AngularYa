@@ -7,33 +7,39 @@ Al presionar un botón mostrar un mensaje si se encuentra aprobado (todas las no
     <label for="dni">DNI: </label>
     <input id="dni" type="text" formControlName="dni">
   </div>
+  <br>
   <div>
     <label for="nombre">Nombre: </label>
-    <input type="text" formControlName="nombre">
+    <input id="nombre" type="text" formControlName="nombre">
   </div>
+  <br>
   <div>
     <label for="materia">Materia: </label>
     <input type="text" id="materia" formControlName="materia">
   </div>
-  <div>
+  <br>
+  <div formGroupName="notas">
     <div>
-      <label for="nota1">Nota 1: </label>
-      <input type="text" id="nota1" formControlName="nota1">
+      <label for="note1">Nota 1: </label>
+      <input type="text" id="note1" formControlName="nota1">
     </div>
+    <br>
     <div>
-      <label for="nota2">Nota 2: </label>
-      <input id="nota2" type="text" formControlName="nota2">
+      <label for="note2">Nota 2: </label>
+      <input id="note2" type="text" formControlName="nota2">
     </div>
+    <br>
     <div>
-      <label for="nota3">Nota 3: </label>
-      <input id="nota3" type="text" formControlName="nota3">
+      <label for="note3">Nota 3: </label>
+      <input id="note3" type="text" formControlName="nota3">
     </div>
   </div>
   
   <button type="submit">Confirmar</button>
 
-  <div>
-    <p>Resultado: {{resultado}}</p>
-  </div>
-
 </form>
+
+<div>
+  <p>Resultado: {{resultado}}</p>
+</div>
+
