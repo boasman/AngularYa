@@ -16,12 +16,12 @@ export class ContactoComponent {
   formularioContacto = new FormGroup({
     nombre: new FormControl(''),
     mail: new FormControl(''),
-    mansaje: new FormControl('')
+    mensaje: new FormControl('')
   });
 
   submit(){
     this.datos = `Nombre=${this.formularioContacto.value.nombre}
                   Mail=${this.formularioContacto.value.mail}
-                  Mensaje=${this.formularioContacto.value.mansaje}`
+                  Mensaje=${this.formularioContacto.value.mensaje}`
   }
 }
