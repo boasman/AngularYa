@@ -1,0 +1,32 @@
+<!-- <p>¿Quién descubrió America?</p>
+@defer (on timer(5s)) {
+  <p>Cristóbal Colón</p>
+} @placeholder {
+  <p>¿?</p>
+} -->
+
+<!-- @defer (on interaction) {
+  <p>Cristóbal Colón</p>
+} @placeholder {
+  <button>¿Quién descubrió America?</button>
+} -->
+
+<!-- @defer(on hover){
+  <p>Cristobal Colon</p>
+}
+@placeholder {
+  <p>¿Quién descubrió America?</p>
+} -->
+
+<!-- <app-tablamultiplicacion [tabla]="2" /> -->
+
+@for (valor of numeros; track $index) {
+
+  @defer () {
+    <app-tabla-multiplicacion [tabla]="valor"></app-tabla-multiplicacion>
+  }
+
+  @placeholder{
+    <p>Esperando la tabla del valor {{valor}}</p>
+  }
+}
