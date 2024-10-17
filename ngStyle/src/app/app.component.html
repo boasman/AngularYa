@@ -1,0 +1,9 @@
+<h1 [ngStyle]="{'color':'red','background-color':'#ff0','text-align':'center'}">Sitio fuera de servicio</h1>
+
+<!-- <h1 [ngStyle]="{'color': retornarColor()}">Sitio fuea de servicio</h1> -->
+
+<table>
+  @for (item of [1,2,3,4,5]; track $index) {
+    <tr [ngStyle]="{'background-color': item%2==0?'red':'yellow'}">{{item}}</tr>
+  }
+</table>
