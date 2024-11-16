@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "vistaDiferida1": {
+    "DirectivaAtributo2": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/vista-diferida1",
+            "outputPath": "dist/directiva-atributo2",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "vistaDiferida1:build:production"
+              "buildTarget": "DirectivaAtributo2:build:production"
             },
             "development": {
-              "buildTarget": "vistaDiferida1:build:development"
+              "buildTarget": "DirectivaAtributo2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -94,6 +94,6 @@
     }
   },
   "cli": {
-    "analytics": "a2f9be6c-bb0e-4d5b-a28d-fe914e1fc75b"
+    "analytics": "a500e201-815f-4a7e-bd3d-15aa4310b5f6"
   }
 }
